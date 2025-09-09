@@ -19,7 +19,7 @@ runs:
       shell: bash
       run: |
         if [ "${{ runner.os }}" = "Windows" ]; then
-          pip install -r ${{ github.action_path }}\requirements-actions.txt --require-hashes
+          pip install -r "${{ github.action_path }}\requirements-actions.txt" --require-hashes
         else
           pip install -r ${{ github.action_path }}/requirements-actions.txt --require-hashes
         fi
